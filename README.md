@@ -1,5 +1,6 @@
 # Contacts
 
-Frontend contact form and admin side records management.
+Frontend newsletter form and admin side records management.
+Option for cvs extract and auto connection with mailchimp.
 
-This module is part of [TypiCMS](https://github.com/TypiCMS/Base), a multilingual CMS based on Laravel 5.  
+This module is part of [Admintool4](https://github.com/webfactorybulgaria/Base), a multilingual CMS based on Laravel 5.  
