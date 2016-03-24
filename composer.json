@@ -1,0 +1,22 @@
+{
+    "name": "webfactorybulgaria/newsletter",
+    "description": "Subscription form for newsletter, connected with mailchimp",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Doncho Petrov",
+            "email": "donchopetrov@gmail.com"
+        }
+    ],
+    "require": {
+        "spatie/laravel-newsletter": "^2.2",
+        "webfactorybulgaria/core": "~4.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TypiCMS\\Modules\\Newsletter\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
