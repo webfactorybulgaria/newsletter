@@ -5,8 +5,6 @@
         <span>@{{ models.length }} @choice('newsletter::global.newsletter', 2)</span>
     </h1>
 
-    @include('core::admin._tabs-lang-list')
-
     <a href="/admin/newsletter/export">Export list as cvs</a>
 
     <div class="table-responsive">
