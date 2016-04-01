@@ -18,7 +18,7 @@ class ModuleProvider extends ServiceProvider
     public function boot()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/config.php', 'typicms.newsletter'
+            __DIR__.'/../config/laravel-newsletter.php', 'typicms.newsletter'
         );
 
         $modules = $this->app['config']['typicms']['modules'];
@@ -26,6 +26,10 @@ class ModuleProvider extends ServiceProvider
 
         $this->loadViewsFrom(__DIR__.'/../resources/views/', 'newsletter');
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'newsletter');
+
+        $this->publishes([
+            __DIR__.'/../config/laravel-newsletter.php' => config_path('laravel-newsletter.php'),
+        ]);
 
         $this->publishes([
             __DIR__.'/../resources/views' => base_path('resources/views/vendor/newsletter'),
@@ -38,6 +42,21 @@ class ModuleProvider extends ServiceProvider
         AliasLoader::getInstance()->alias(
             'Honeypot',
             'Msurguy\Honeypot\HoneypotFacade'
+        );
+
+        $this->app->register('Maatwebsite\Excel\ExcelServiceProvider');
+        $this->app->register('Spatie\Newsletter\NewsletterServiceProvider');
+
+        // Spatie Newsletter facade
+        AliasLoader::getInstance()->alias(
+            'VNewsletter',
+            'Spatie\Newsletter\NewsletterFacade'
+        );
+
+        // Spatie Newsletter facade
+        AliasLoader::getInstance()->alias(
+            'Excel',
+            'Maatwebsite\Excel\Facades\Excel'
         );
 
         // Observers
