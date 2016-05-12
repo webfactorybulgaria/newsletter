@@ -13,7 +13,7 @@ class PublicController extends BasePublicController
 
     public function __construct(NewsletterInterface $newsletter)
     {
-        parent::__construct($newsletter);
+        parent::__construct($newsletter, 'newsletter');
     }
 
     /**
