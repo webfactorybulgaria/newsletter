@@ -45,19 +45,19 @@ class RouteServiceProvider extends ServiceProvider
             /*
              * Admin routes
              */
-            $router->get('admin/newsletter', ['as' => 'admin.newsletter.index', 'uses' => 'AdminController@index']);
-            $router->get('admin/newsletter/create', ['as' => 'admin.newsletter.create', 'uses' => 'AdminController@create']);
-            $router->get('admin/newsletter/export', ['as' => 'admin.newsletter.export', 'uses' => 'AdminController@export']);
-            $router->get('admin/newsletter/{newsletter}/edit', ['as' => 'admin.newsletter.edit', 'uses' => 'AdminController@edit']);
-            $router->post('admin/newsletter', ['as' => 'admin.newsletter.store', 'uses' => 'AdminController@store']);
-            $router->put('admin/newsletter/{newsletter}', ['as' => 'admin.newsletter.update', 'uses' => 'AdminController@update']);
+            $router->get('admin/newsletter', 'AdminController@index')->name('admin::index-newsletter');
+            $router->get('admin/newsletter/create', 'AdminController@create')->name('admin::create-newsletter');
+            $router->get('admin/newsletter/export', 'AdminController@export')->name('admin::export-newsletter');
+            $router->get('admin/newsletter/{newsletter}/edit', 'AdminController@edit')->name('admin::edit-newsletter');
+            $router->post('admin/newsletter', 'AdminController@store')->name('admin::store-newsletter');
+            $router->put('admin/newsletter/{newsletter}', 'AdminController@update')->name('admin::update-newsletter');
 
             /*
              * API routes
              */
-            $router->get('api/newsletter', ['as' => 'api.newsletter.index', 'uses' => 'ApiController@index']);
-            $router->put('api/newsletter/{newsletter}', ['as' => 'api.newsletter.update', 'uses' => 'ApiController@update']);
-            $router->delete('api/newsletter/{newsletter}', ['as' => 'api.newsletter.destroy', 'uses' => 'ApiController@destroy']);
+            $router->get('api/newsletter', 'ApiController@index')->name('api::index-newsletter');
+            $router->put('api/newsletter/{newsletter}', 'ApiController@update')->name('api::update-newsletter');
+            $router->delete('api/newsletter/{newsletter}', 'ApiController@destroy')->name('api::destroy-newsletter');
         });
     }
 }
