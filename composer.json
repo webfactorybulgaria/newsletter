@@ -10,7 +10,7 @@
     ],
     "require": {
         "spatie/laravel-newsletter": "^2.2",
-        "webfactorybulgaria/core": "dev-dev@dev",
+        "webfactorybulgaria/core": "~4.1.0",
         "maatwebsite/excel": "^2.1"
     },
     "autoload": {
