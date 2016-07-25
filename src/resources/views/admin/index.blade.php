@@ -8,15 +8,18 @@
 
     <a href="{{ route('admin::create-newsletter') }}" class="btn-add"><i class="fa fa-plus-circle"></i><span class="sr-only">New</span></a>
     <h1>
-        <span>@{{ models.length }} @choice('newsletter::global.newsletter', 2)</span>
+        <span>@{{ totalModels }} @choice('newsletter::global.newsletter', 2)</span>
     </h1>
 
     <a href="/admin/newsletter/export">Export list as cvs</a>
 
     <div class="table-responsive">
 
-        <table st-persist="newsletterTable" st-table="displayedModels" st-safe-src="models" st-order st-filter class="table table-condensed table-main">
+        <table st-persist="newsletterTable" st-table="displayedModels" st-order st-sort-default="email" st-pipe="callServer" st-filter class="table table-condensed table-main">
             <thead>
+                <tr>
+                    <td colspan="3" st-items-by-page="itemsByPage" st-pagination="" st-template="/views/partials/pagination.custom.html"></td>
+                </tr>
                 <tr>
                     <th class="delete"></th>
                     <th class="edit"></th>
@@ -41,7 +44,10 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="6" typi-pagination></td>
+                    <td colspan="2" st-items-by-page="itemsByPage" st-pagination="" st-template="/views/partials/pagination.custom.html"></td>
+                    <td>
+                        <div ng-include="'/views/partials/pagination.itemsPerPage.html'"></div>
+                    </td>
                 </tr>
             </tfoot>
         </table>
