@@ -3,9 +3,9 @@
 namespace TypiCMS\Modules\Newsletter\Http\Controllers;
 
 use Illuminate\Support\Facades\Request;
-use TypiCMS\Modules\Newsletter\Models\Newsletter;
-use TypiCMS\Modules\Newsletter\Repositories\NewsletterInterface as Repository;
-use TypiCMS\Modules\Core\Http\Controllers\BaseApiController;
+use TypiCMS\Modules\Newsletter\Custom\Models\Newsletter;
+use TypiCMS\Modules\Newsletter\Custom\Repositories\NewsletterInterface as Repository;
+use TypiCMS\Modules\Core\Custom\Http\Controllers\BaseApiController;
 use VNewsletter;
 
 class ApiController extends BaseApiController
@@ -50,7 +50,7 @@ class ApiController extends BaseApiController
     /**
      * Remove the specified resource from storage.
      *
-     * @param \TypiCMS\Modules\Newsletter\Models\Newsletter $newsletter
+     * @param \TypiCMS\Modules\Newsletter\Custom\Models\Newsletter $newsletter
      *
      * @return \Illuminate\Http\JsonResponse
      */

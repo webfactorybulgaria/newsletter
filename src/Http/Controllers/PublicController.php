@@ -2,9 +2,9 @@
 
 namespace TypiCMS\Modules\Newsletter\Http\Controllers;
 
-use TypiCMS\Modules\Newsletter\Http\Requests\FormRequest;
-use TypiCMS\Modules\Newsletter\Repositories\NewsletterInterface;
-use TypiCMS\Modules\Core\Http\Controllers\BasePublicController;
+use TypiCMS\Modules\Newsletter\Custom\Http\Requests\FormRequest;
+use TypiCMS\Modules\Newsletter\Custom\Repositories\NewsletterInterface;
+use TypiCMS\Modules\Core\Custom\Http\Controllers\BasePublicController;
 use VNewsletter;
 
 class PublicController extends BasePublicController

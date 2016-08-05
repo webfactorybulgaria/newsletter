@@ -5,13 +5,13 @@ namespace TypiCMS\Modules\Newsletter\Providers;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
-use TypiCMS\Modules\Newsletter\Events\EventHandler;
-use TypiCMS\Modules\Newsletter\Models\Newsletter;
-use TypiCMS\Modules\Newsletter\Repositories\CacheDecorator;
-use TypiCMS\Modules\Newsletter\Repositories\EloquentNewsletter;
-use TypiCMS\Modules\Core\Facades\TypiCMS;
-use TypiCMS\Modules\Core\Observers\FileObserver;
-use TypiCMS\Modules\Core\Services\Cache\LaravelCache;
+use TypiCMS\Modules\Newsletter\Custom\Events\EventHandler;
+use TypiCMS\Modules\Newsletter\Custom\Models\Newsletter;
+use TypiCMS\Modules\Newsletter\Custom\Repositories\CacheDecorator;
+use TypiCMS\Modules\Newsletter\Custom\Repositories\EloquentNewsletter;
+use TypiCMS\Modules\Core\Custom\Facades\TypiCMS;
+use TypiCMS\Modules\Core\Custom\Observers\FileObserver;
+use TypiCMS\Modules\Core\Custom\Services\Cache\LaravelCache;
 
 class ModuleProvider extends ServiceProvider
 {
@@ -75,7 +75,7 @@ class ModuleProvider extends ServiceProvider
         /*
          * Register route service provider
          */
-        $app->register('TypiCMS\Modules\Newsletter\Providers\RouteServiceProvider');
+        $app->register('TypiCMS\Modules\Newsletter\Custom\Providers\RouteServiceProvider');
 
         /*
          * Register Honeypot
@@ -85,7 +85,7 @@ class ModuleProvider extends ServiceProvider
         /*
          * Sidebar view composer
          */
-        $app->view->composer('core::admin._sidebar', 'TypiCMS\Modules\Newsletter\Composers\SidebarViewComposer');
+        $app->view->composer('core::admin._sidebar', 'TypiCMS\Modules\Newsletter\Custom\Composers\SidebarViewComposer');
 
         /*
          * Add the page in the view.
@@ -94,7 +94,7 @@ class ModuleProvider extends ServiceProvider
             $view->page = TypiCMS::getPageLinkedToModule('newsletter');
         });
 
-        $app->bind('TypiCMS\Modules\Newsletter\Repositories\NewsletterInterface', function (Application $app) {
+        $app->bind('TypiCMS\Modules\Newsletter\Custom\Repositories\NewsletterInterface', function (Application $app) {
             $repository = new EloquentNewsletter(new Newsletter());
             if (!config('typicms.cache')) {
                 return $repository;

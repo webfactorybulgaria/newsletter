@@ -3,8 +3,8 @@
 namespace TypiCMS\Modules\Newsletter\Models;
 
 use Laracasts\Presenter\PresentableTrait;
-use TypiCMS\Modules\Core\Models\Base;
-use TypiCMS\Modules\History\Traits\Historable;
+use TypiCMS\Modules\Core\Custom\Models\Base;
+use TypiCMS\Modules\History\Custom\Traits\Historable;
 
 class Newsletter extends Base
 {
@@ -13,7 +13,7 @@ class Newsletter extends Base
 
     protected $table = 'newsletter';
 
-    protected $presenter = 'TypiCMS\Modules\Newsletter\Presenters\ModulePresenter';
+    protected $presenter = 'TypiCMS\Modules\Newsletter\Custom\Presenters\ModulePresenter';
 
     protected $fillable = [
         'email',
