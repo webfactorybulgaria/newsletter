@@ -1,6 +1,6 @@
 <?php
 
-namespace TypiCMS\Modules\Newsletter\Custom\Providers;
+namespace TypiCMS\Modules\Newsletter\Shells\Providers;
 
 use TypiCMS\Modules\Newsletter\Providers\ModuleProvider as Base;
 

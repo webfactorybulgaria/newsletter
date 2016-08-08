@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Mail;
-use TypiCMS\Modules\Core\Custom\Facades\TypiCMS;
+use TypiCMS\Modules\Core\Shells\Facades\TypiCMS;
 
 class EventHandler
 {
@@ -38,6 +38,6 @@ class EventHandler
      */
     public function subscribe($events)
     {
-        $events->listen('NewNewsletterRequest', 'TypiCMS\Modules\Newsletter\Custom\Events\EventHandler@onCreate');
+        $events->listen('NewNewsletterRequest', 'TypiCMS\Modules\Newsletter\Shells\Events\EventHandler@onCreate');
     }
 }

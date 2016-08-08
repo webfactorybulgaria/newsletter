@@ -1,6 +1,6 @@
 <?php
 
-namespace TypiCMS\Modules\Newsletter\Custom\Composers;
+namespace TypiCMS\Modules\Newsletter\Shells\Composers;
 
 use TypiCMS\Modules\Newsletter\Composers\SidebarViewComposer as Base;
 

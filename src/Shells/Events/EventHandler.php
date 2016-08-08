@@ -1,6 +1,6 @@
 <?php
 
-namespace TypiCMS\Modules\Newsletter\Custom\Events;
+namespace TypiCMS\Modules\Newsletter\Shells\Events;
 
 use TypiCMS\Modules\Newsletter\Events\EventHandler as Base;
 

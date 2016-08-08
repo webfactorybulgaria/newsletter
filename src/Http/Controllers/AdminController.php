@@ -2,10 +2,10 @@
 
 namespace TypiCMS\Modules\Newsletter\Http\Controllers;
 
-use TypiCMS\Modules\Newsletter\Custom\Http\Requests\FormRequest;
-use TypiCMS\Modules\Newsletter\Custom\Models\Newsletter;
-use TypiCMS\Modules\Newsletter\Custom\Repositories\NewsletterInterface;
-use TypiCMS\Modules\Core\Custom\Http\Controllers\BaseAdminController;
+use TypiCMS\Modules\Newsletter\Shells\Http\Requests\FormRequest;
+use TypiCMS\Modules\Newsletter\Shells\Models\Newsletter;
+use TypiCMS\Modules\Newsletter\Shells\Repositories\NewsletterInterface;
+use TypiCMS\Modules\Core\Shells\Http\Controllers\BaseAdminController;
 use Excel;
 
 class AdminController extends BaseAdminController
@@ -41,7 +41,7 @@ class AdminController extends BaseAdminController
     /**
      * Edit form for the specified resource.
      *
-     * @param \TypiCMS\Modules\Newsletter\Custom\Models\Newsletter $newsletter
+     * @param \TypiCMS\Modules\Newsletter\Shells\Models\Newsletter $newsletter
      *
      * @return \Illuminate\View\View
      */
@@ -54,7 +54,7 @@ class AdminController extends BaseAdminController
     /**
      * Store a newly created resource in storage.
      *
-     * @param \TypiCMS\Modules\Newsletter\Custom\Http\Requests\FormRequest $request
+     * @param \TypiCMS\Modules\Newsletter\Shells\Http\Requests\FormRequest $request
      *
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -68,8 +68,8 @@ class AdminController extends BaseAdminController
     /**
      * Update the specified resource in storage.
      *
-     * @param \TypiCMS\Modules\Newsletter\Custom\Models\Newsletter         $newsletter
-     * @param \TypiCMS\Modules\Newsletter\Custom\Http\Requests\FormRequest $request
+     * @param \TypiCMS\Modules\Newsletter\Shells\Models\Newsletter         $newsletter
+     * @param \TypiCMS\Modules\Newsletter\Shells\Http\Requests\FormRequest $request
      *
      * @return \Illuminate\Http\RedirectResponse
      */

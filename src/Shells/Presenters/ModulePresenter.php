@@ -1,6 +1,6 @@
 <?php
 
-namespace TypiCMS\Modules\Newsletter\Custom\Presenters;
+namespace TypiCMS\Modules\Newsletter\Shells\Presenters;
 
 use TypiCMS\Modules\Newsletter\Presenters\ModulePresenter as Base;
 
