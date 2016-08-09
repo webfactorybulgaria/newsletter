@@ -2,9 +2,9 @@
 
 namespace TypiCMS\Modules\Newsletter\Shells\Providers;
 
-use TypiCMS\Modules\Newsletter\Providers\RouteServiceProvider as Base;
+use TypiCMS\Modules\Newsletter\Providers\RouteServiceProvider as BaseClass;
 
-class RouteServiceProvider extends Base
+class RouteServiceProvider extends BaseClass
 {
 
 }

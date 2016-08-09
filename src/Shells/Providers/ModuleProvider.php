@@ -2,9 +2,9 @@
 
 namespace TypiCMS\Modules\Newsletter\Shells\Providers;
 
-use TypiCMS\Modules\Newsletter\Providers\ModuleProvider as Base;
+use TypiCMS\Modules\Newsletter\Providers\ModuleProvider as BaseClass;
 
-class ModuleProvider extends Base
+class ModuleProvider extends BaseClass
 {
 
 }

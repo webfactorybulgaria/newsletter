@@ -2,9 +2,9 @@
 
 namespace TypiCMS\Modules\Newsletter\Shells\Http\Controllers;
 
-use TypiCMS\Modules\Newsletter\Http\Controllers\AdminController as Base;
+use TypiCMS\Modules\Newsletter\Http\Controllers\AdminController as BaseClass;
 
-class AdminController extends Base
+class AdminController extends BaseClass
 {
 
 }

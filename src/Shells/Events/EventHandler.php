@@ -2,9 +2,9 @@
 
 namespace TypiCMS\Modules\Newsletter\Shells\Events;
 
-use TypiCMS\Modules\Newsletter\Events\EventHandler as Base;
+use TypiCMS\Modules\Newsletter\Events\EventHandler as BaseClass;
 
-class EventHandler extends Base
+class EventHandler extends BaseClass
 {
 
 }

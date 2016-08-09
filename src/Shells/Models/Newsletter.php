@@ -2,9 +2,9 @@
 
 namespace TypiCMS\Modules\Newsletter\Shells\Models;
 
-use TypiCMS\Modules\Newsletter\Models\Newsletter as Base;
+use TypiCMS\Modules\Newsletter\Models\Newsletter as BaseClass;
 
-class Newsletter extends Base
+class Newsletter extends BaseClass
 {
 
 }
