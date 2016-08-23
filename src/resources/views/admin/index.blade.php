@@ -33,7 +33,7 @@
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody ng-class="{'table-loading':isLoading}">
                 <tr ng-repeat="model in displayedModels">
                     <td typi-btn-delete action="delete(model, model.title + ' ' + model.first_name + ' ' + model.last_name)"></td>
                     <td>
