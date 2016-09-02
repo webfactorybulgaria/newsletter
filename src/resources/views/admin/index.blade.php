@@ -4,7 +4,7 @@
 
 @section('main')
 
-<div ng-app="typicms" ng-cloak ng-controller="ListController">
+<div ng-app="typicms" ng-cloak ng-controller="ListController" ng-show="!initializing">
 
     <a href="{{ route('admin::create-newsletter') }}" class="btn-add"><i class="fa fa-plus-circle"></i><span class="sr-only">New</span></a>
     <h1>
