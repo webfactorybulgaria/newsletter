@@ -15,7 +15,7 @@
 
         <h2>@lang('newsletter::global.New newsletter request from') {{ $model->first_name }} {{ $model->last_name }}</h2>
 
-        <p><a class="btn btn-primary" href="{{ route('admin.newsletter.edit', $model->id) }}">@lang('newsletter::global.View online')</a></p>
+        <p><a class="btn btn-primary" href="{{ route('admin::edit-newsletter', $model->id) }}">@lang('newsletter::global.View online')</a></p>
 
         @include('newsletter::mails._detail', ['model' => $model])
 
