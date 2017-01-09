@@ -52,7 +52,7 @@ class PublicController extends BasePublicController
             $data[$key] = strip_tags($value);
         }
 
-        VNewsletter::subscribe($data['email']);
+        VNewsletter::subscribeOrUpdate($data['email']);
 
         $newsletter = $this->repository->create($data);
 
